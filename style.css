@@ -1,0 +1,575 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-size: 18px;
+    font-family: sans-serif;
+    height: 100vh;
+    overflow-x: hidden;
+}
+.container {
+    display: flex;
+}
+.title {
+    width: 50%;
+    height: 100vh;
+    background: #ebd6cb;
+    position: relative;
+    border-right: 3px solid #265FC2;
+}
+.presentation {
+    position: absolute;
+    color: #000;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    border-right: 3px solid #265FC2;
+}
+.presentation p {
+    margin-top: 20px;
+    color:#000;
+}
+h1 {
+    font-size: 55px;
+    display: block;
+    width: 100%;
+}
+.bouton {
+    background-color: #265FC2;
+    border: none;
+    color: #000;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 20px;
+}
+.bouton:hover {
+    background-color: #000;
+    color: #265FC2;
+}
+/*----- Partie Carte -----*/
+.boxCartes{
+    display: block;
+    position: relative;
+    width: 80%;
+    height: 100vh;
+}
+.cards, .cards .stack {
+    transform-style: preserve-3d;
+}
+.cards {
+    display: grid;
+    grid-template: repeat(1, 324px) / repeat(1, 540px);
+    grid-gap: 27px;
+    position: absolute;
+    top: 30%;
+    left: 25%;
+    transform:rotateX(-45deg) rotateZ(-45deg);
+    transition: 1s ease;
+}
+.cards:hover {
+    transform:rotateX(0deg) rotateZ(0deg);
+    
+}
+.cards .stack {
+    display: block;
+    position: relative;
+}
+.contents {
+    font-size: 13.5px;
+    line-height: 1.25;
+    color: #000;
+}
+.contents h2 {
+    color: #265FC2;
+    font-size: 36px;
+    font-weight: 400;
+    margin-bottom: 4.5px;
+}
+.contents h2 strong{
+    color: #000;
+    font-size: 36px;
+    font-weight: 400;
+    margin-bottom: 4.5px;
+}
+.contents span {
+    margin-right: 13.5px;
+}
+.contents h3 {
+    color: #000;
+    font-size: 36px;
+    font-weight: 400;
+    margin-bottom: 4.5px;
+}
+.contents h4 {
+    color: #000;
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 4.5px;
+}
+.stack .card {
+    background-image: url("https://cdn.pixabay.com/photo/2015/05/29/19/17/study-789631_960_720.jpg");
+    background-size: 100% 100%;
+    padding: 13.5px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    box-shadow: 10px 10px 20px rgba(0,0,0,0.9);
+}
+.mail {
+    color: snow;
+    font-size: 16px;
+    font-weight: 500;
+}
+.phone {
+    color: snow;
+    font-size: 14px;
+    font-weight: 500;
+}
+@media screen and (min-width:320px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+    .title {
+        width: 100%;
+    }
+    .boxCartes {
+        width: 100%;
+    }
+    .cards {
+        grid-template: repeat(1, 162px) / repeat(1, 270px);
+        left: 8%;
+    }
+    .contents {
+        font-size: 13.5px;
+        line-height: 1;
+    }
+    .contents h2 {
+        font-size: 17px;
+        margin-bottom: 2.5px;
+    }
+    .contents h2 strong {
+        font-size: 19px;
+    }
+    .contents h3 {
+        font-size: 12px;
+    }
+    .contents h4 {
+        font-size: 10px;
+        margin-bottom: 2.5px;
+    }
+    .contents span {
+        margin-right: .5px;
+    }
+    .contents p {
+        font-size: 14px;
+    }
+}
+@media screen and (min-width:375px) {
+    .title {
+        width: 100%;
+    }
+    .boxCartes {
+        width: 100%;
+    }
+    .cards {
+        grid-template: repeat(1, 162px) / repeat(1, 270px);
+        left: 15%;
+    }
+}
+@media screen and (min-width:414px) {
+    .title {
+        width: 100%;
+    }
+    .boxCartes {
+        width: 100%;
+    }
+    .cards {
+        grid-template: repeat(1, 182px) / repeat(1, 290px);
+        left: 15%;
+    }
+    .contents h2 {
+        font-size: 18px;
+        margin-bottom: 2.5px;
+    }
+    .contents h2 strong {
+        font-size: 20px;
+    }
+    .contents h3 {
+        font-size: 13px;
+    }
+    .contents h4 {
+        font-size: 11px;
+        margin-bottom: 2.5px;
+    }
+    .contents span {
+        margin-right: .5px;
+    }
+    .contents p {
+        font-size: 11px;
+    }
+}
+@media screen and (min-width:568px) and (orientation:landscape) {
+    .title {
+        width: 100%;
+    }
+    .boxCartes {
+        width: 100%;
+    }
+    .cards {
+        grid-template: repeat(1, 204px) / repeat(1, 310px);
+        top: 20%;
+        left: 20%;
+    }
+    .contents h2 {
+        font-size: 20px;
+        margin-bottom: 2.5px;
+    }
+    .contents h2 strong {
+        font-size: 22px;
+    }
+    .contents h3 {
+        font-size: 15px;
+    }
+    .contents h4 {
+        font-size: 13px;
+        margin-bottom: 3.5px;
+    }
+    .contents span {
+        margin-right: .5px;
+    }
+    .contents p {
+        font-size: 13px;
+    }
+}
+@media screen and (min-width:600px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+    .title {
+        width: 100%;
+    }
+    .boxCartes {
+        width: 100%;
+    }
+    .cards {
+        grid-template: repeat(1, 304px) / repeat(1, 520px);
+        left: 5%;
+    }
+    .contents {
+        font-size: 13.5px;
+        line-height: 1.25;
+    }
+    .contents h2 {
+        font-size: 29px;
+        margin-bottom: 4.5px;
+    }
+    .contents h2 strong {
+        font-size: 32px;
+    }
+    .contents h3 {
+        font-size: 19px;
+    }
+    .contents h4 {
+        font-size: 17px;
+        margin-bottom: 4.5px;
+    }
+    .contents span {
+        margin-right: 2.5px;
+    }
+    .contents p {
+        font-size: 17px;
+    }
+}
+@media screen and (min-width:667px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+    .title {
+        width: 100%;
+    }
+    .boxCartes {
+        width: 100%;
+    }
+    .cards {
+        grid-template: repeat(1, 304px) / repeat(1, 520px);
+        top:15%;
+        left: 5%;
+    }
+    .contents {
+        font-size: 13.5px;
+        line-height: 1.25;
+    }
+    .contents h2 {
+        font-size: 29px;
+        margin-bottom: 4.5px;
+    }
+    .contents h2 strong {
+        font-size: 32px;
+    }
+    .contents h3 {
+        font-size: 19px;
+    }
+    .contents h4 {
+        font-size: 17px;
+        margin-bottom: 4.5px;
+    }
+    .contents span {
+        margin-right: 2.5px;
+    }
+    .contents p {
+        font-size: 17px;
+    }
+}
+@media screen and (min-width:768px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+    .title {
+        width: 100%;
+    }
+    .boxCartes {
+        width: 100%;
+    }
+    .cards {
+        grid-template: repeat(1, 304px) / repeat(1, 520px);
+        top:18%;
+        left: 15%;
+    }
+    .contents {
+        font-size: 13.5px;
+        line-height: 1.25;
+    }
+    .contents h2 {
+        font-size: 29px;
+        margin-bottom: 4.5px;
+    }
+    .contents h2 strong {
+        font-size: 32px;
+    }
+    .contents h3 {
+        font-size: 19px;
+    }
+    .contents h4 {
+        font-size: 17px;
+        margin-bottom: 4.5px;
+    }
+    .contents span {
+        margin-right: 2.5px;
+    }
+    .contents p {
+        font-size: 17px;
+    }
+}
+@media screen and (min-width:800px) {
+    .title {
+        width: 100%;
+    }
+    .boxCartes {
+        width: 100%;
+    }
+    .cards {
+        grid-template: repeat(1, 324px) / repeat(1, 540px);
+        left: 25%;
+    }
+    .contents {
+        font-size: 13.5px;
+        line-height: 1.3;
+    }
+    .contents h2 {
+        font-size: 30px;
+        margin-bottom: 4.5px;
+    }
+    .contents h2 strong {
+        font-size: 34px;
+    }
+    .contents h3 {
+        font-size: 19px;
+    }
+    .contents h4 {
+        font-size: 17px;
+        margin-bottom: 5.5px;
+    }
+    .contents span {
+        margin-right: 2.5px;
+    }
+    .contents {
+        font-size: 13.5px;
+        line-height: 1.25;
+    }
+    .contents h2 {
+        font-size: 29px;
+        margin-bottom: 5.5px;
+    }
+    .contents h2 strong {
+        font-size: 32px;
+    }
+    .contents h3 {
+        font-size: 19px;
+    }
+    .contents h4 {
+        font-size: 17px;
+        margin-bottom: 5.5px;
+    }
+    .contents span {
+        margin-right: 2.5px;
+    }
+    .contents p {
+        font-size: 17px;
+    }
+    .contents p:nth-child(3) {
+        margin-bottom: 25px;
+    }
+}
+@media screen and (min-width:1024px) {
+    .container {
+        display: flex;
+        flex-direction: row;
+    }
+    .boxCartes {
+        width: 100%;
+    }
+    .cards, .stack {
+        transform-style: preserve-3d;
+    }
+    .cards {
+        grid-template: repeat(1, 264px) / repeat(1, 380px);
+        top: 30%;
+        left: 12%;
+    }
+
+    .cards:hover {
+        transform:rotateX(0deg) rotateZ(0deg);
+        
+    }
+    .stack {
+        display: block;
+        position: relative;
+    }
+    .contents {
+        font-size: 13.5px;
+        line-height: 1.25;
+    }
+    .stack .contents {
+        color: #000;
+    }
+    .contents h2 {
+        font-size: 29px;
+        margin-bottom: 4.5px;
+    }
+    .contents h2 strong {
+        font-size: 32px;
+    }
+    .contents h3 {
+        font-size: 19px;
+    }
+    .contents h4 {
+        font-size: 17px;
+        margin-bottom: 4.5px;
+    }
+    .contents span {
+        margin-right: 2.5px;
+    }
+    .contents p {
+        font-size: 17px;
+    }
+    }
+@media screen and (min-width:1280px) {
+    .boxCartes{
+        display: block;
+        position: relative;
+        width: 80%;
+        height: 100vh;
+    }
+    .boxCartes .cards, .boxCartes .cards .stack {
+        transform-style: preserve-3d;
+    }
+    .boxCartes .cards {
+        display: grid;
+        grid-template: repeat(1, 284px) / repeat(1, 500px);
+        grid-gap: 27px;
+        position: absolute;
+        top: 30%;
+        left: 7%;
+        transform:rotateX(-45deg) rotateZ(-45deg);
+        transition: 1s ease;
+    }
+    .boxCartes .cards:hover {
+        transform:rotateX(0deg) rotateZ(0deg);
+        
+    }
+    .boxCartes .cards .stack {
+        display: block;
+        position: relative;
+    }
+    .stack .card .contents {
+        font-size: 13.5px;
+        line-height: 1.25;
+        color: #000;
+    }
+    .card .contents h2 {
+        color: #265FC2;
+        font-size: 42px;
+        font-weight: 400;
+        margin-bottom: 4.5px;
+    }
+    .card .contents h2 strong{
+        color: #000;
+        font-size: 42px;
+        font-weight: 400;
+        margin-bottom: 4.5px;
+    }
+    .card .contents span {
+        margin-right: 14px;
+    }
+    .card .contents h3 {
+        font-size: 29px;
+    }
+    .stack .card {
+        background-image: url("https://cdn.pixabay.com/photo/2015/05/29/19/17/study-789631_960_720.jpg");
+        background-size: 100% 100%;
+        padding: 13.5px;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        box-shadow: 10px 10px 20px rgba(0,0,0,0.9);
+    }
+}
+@media screen and (min-width:1440px) {
+    .boxCartes{
+        display: block;
+        position: relative;
+        width: 80%;
+        height: 100vh;
+    }
+    .boxCartes .cards, .boxCartes .cards .stack {
+        transform-style: preserve-3d;
+    }
+    .boxCartes .cards {
+        display: grid;
+        grid-template: repeat(1, 304px) / repeat(1, 520px);
+        grid-gap: 27px;
+        position: absolute;
+        top: 30%;
+        left: 12%;
+        transform:rotateX(-45deg) rotateZ(-45deg);
+        transition: 1s ease;
+    }
+    
+}
+@media screen and (min-width:1920px) {
+    .cards {
+        grid-template: repeat(1, 324px) / repeat(1, 540px);
+        left: 25%;
+    }
+    
+}
