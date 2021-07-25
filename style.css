@@ -1,3 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Simonetta&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');
+
+:root {
+    --color-primary:#265FC2;
+    --color-second: #63788F;
+    --color-third: #48F4F5;
+    --color-fourth: #F69E85;
+    --color-fifth: #C23125;
+    --color-base: #fff;
+    --color-text: #000;
+}
+
 *, *:before, *:after {
     box-sizing: border-box;
     margin: 0;
@@ -5,7 +18,7 @@
 }
 body {
     font-size: 18px;
-    font-family: sans-serif;
+    font-family: 'Simonetta', cursive, sans-serif;
     height: 100vh;
     overflow-x: hidden;
 }
@@ -15,22 +28,22 @@ body {
 .title {
     width: 50%;
     height: 100vh;
-    background: #ebd6cb;
+    background: var(--color-fourth);
     position: relative;
-    border-right: 3px solid #265FC2;
+    border-right: 3px solid var(--color-primary);
 }
 .presentation {
     position: absolute;
-    color: #000;
+    color: var(--color-text);
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 80%;
-    border-right: 3px solid #265FC2;
+    border-right: 3px solid var(--color-primary);
 }
 .presentation p {
     margin-top: 20px;
-    color:#000;
+    color:var(--color-text);
 }
 h1 {
     font-size: 55px;
@@ -38,19 +51,21 @@ h1 {
     width: 100%;
 }
 .bouton {
-    background-color: #265FC2;
-    border: none;
-    color: #000;
+    background-color: var(--color-primary);
+    border: 3px solid transparent;
+    color: var(--color-text);
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 18px;
+    font-weight: 600;
     border-radius: 20px;
 }
 .bouton:hover {
-    background-color: #000;
-    color: #265FC2;
+    background-color: var(--color-base);
+    color: var(--color-primary);
+    border: 3px solid var(--color-fifth);
 }
 /*----- Partie Carte -----*/
 .boxCartes{
@@ -83,16 +98,16 @@ h1 {
 .contents {
     font-size: 13.5px;
     line-height: 1.25;
-    color: #000;
+    color: var(--color-text);
 }
 .contents h2 {
-    color: #265FC2;
+    color: var(--color-primary);
     font-size: 36px;
     font-weight: 400;
     margin-bottom: 4.5px;
 }
 .contents h2 strong{
-    color: #000;
+    color: var(--color-text);
     font-size: 36px;
     font-weight: 400;
     margin-bottom: 4.5px;
@@ -101,13 +116,13 @@ h1 {
     margin-right: 13.5px;
 }
 .contents h3 {
-    color: #000;
+    color: var(--color-text);
     font-size: 36px;
     font-weight: 400;
     margin-bottom: 4.5px;
 }
 .contents h4 {
-    color: #000;
+    color: var(--color-text);
     font-size: 20px;
     font-weight: 400;
     margin-bottom: 4.5px;
@@ -122,12 +137,12 @@ h1 {
     box-shadow: 10px 10px 20px rgba(0,0,0,0.9);
 }
 .mail {
-    color: snow;
+    color: var(--color-base);
     font-size: 16px;
     font-weight: 500;
 }
 .phone {
-    color: snow;
+    color: var(--color-base);
     font-size: 14px;
     font-weight: 500;
 }
@@ -460,7 +475,7 @@ h1 {
         line-height: 1.25;
     }
     .stack .contents {
-        color: #000;
+        color: var(--color-text);
     }
     .contents h2 {
         font-size: 29px;
@@ -514,16 +529,16 @@ h1 {
     .stack .card .contents {
         font-size: 13.5px;
         line-height: 1.25;
-        color: #000;
+        color: var(--color-text);
     }
     .card .contents h2 {
-        color: #265FC2;
+        color: var(--color-primary);
         font-size: 42px;
         font-weight: 400;
         margin-bottom: 4.5px;
     }
     .card .contents h2 strong{
-        color: #000;
+        color: var(--color-text);
         font-size: 42px;
         font-weight: 400;
         margin-bottom: 4.5px;
